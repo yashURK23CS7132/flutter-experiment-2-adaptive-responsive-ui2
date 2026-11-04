@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'ShopEasy – E-Commerce Product Catalog',
+      title: 'QuickCart – E-Commerce Product Catalog',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -70,7 +70,7 @@ const List<Product> allProducts = [
   Product(
     name: 'Laptop',
     category: 'Electronics',
-    price: '₹ 54,999',
+    price: '₹ 49,999',
     rating: 4.5,
     icon: Icons.laptop,
     color: Color(0xFFE3F2FD),
@@ -139,6 +139,15 @@ const List<Product> allProducts = [
     color: Color(0xFFE8EAF6),
     iconColor: Color(0xFF283593),
   ),
+  Product(
+    name: 'Speaker',
+    category: 'Electronics',
+    price: '₹ 3,299',
+    rating: 4.4,
+    icon: Icons.speaker,
+    color: Color(0xFFFFF3E0),
+    iconColor: Color(0xFFE65100),
+  ),
 ];
 
 // Category list for filter chips
@@ -177,7 +186,7 @@ class _CatalogPageState extends State<CatalogPage> {
             Icon(Icons.shopping_bag, color: Colors.white, size: 26),
             SizedBox(width: 8),
             Text(
-              'ShopEasy',
+              'QuickCart',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
             ),
           ],
@@ -244,7 +253,7 @@ class _CatalogPageState extends State<CatalogPage> {
                     ),
                     SizedBox(height: 2),
                     Text(
-                      'Layout changes based on screen width',
+                      'Grid adapts to your screen size',
                       style: TextStyle(
                         color: Colors.white60,
                         fontSize: 11,
@@ -261,7 +270,7 @@ class _CatalogPageState extends State<CatalogPage> {
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Search products...',
+                hintText: 'Search for products...',
                 hintStyle: const TextStyle(color: Colors.grey, fontSize: 14),
                 prefixIcon: const Icon(Icons.search, color: Color(0xFF2E7D32)),
                 filled: true,
